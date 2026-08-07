@@ -1,0 +1,58 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* body {
+  @apply bg-slate-900 text-slate-100 antialiased;
+} */
+
+img{
+    transform:translateZ(0);
+    will-change:transform;
+}
+
+section{
+    transform:translateZ(0);
+}
+
+/* Mobile Performance Optimization */
+
+@media (max-width: 768px) {
+
+  *{
+    scroll-behavior: smooth;
+  }
+
+  .backdrop-blur-xl,
+  .backdrop-blur-2xl,
+  .backdrop-blur-md{
+    backdrop-filter:none !important;
+    -webkit-backdrop-filter:none !important;
+  }
+
+  .blur-3xl,
+  .blur-2xl,
+  .blur-xl{
+    filter:none !important;
+  }
+
+  *{
+    transition-duration:0.15s !important;
+  }
+
+}
+
+@media (hover:none){
+
+  *:hover{
+      transform:none !important;
+      box-shadow:none !important;
+  }
+
+}
+
